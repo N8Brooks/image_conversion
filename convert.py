@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import multiprocessing as mp
 import numpy as np
 
-PARALLEL = 8
+PARALLEL = 4
 
 def read(file):
     """
@@ -45,7 +45,7 @@ def grey_scale_row(row):
     Returns:
         numpy.ndarray: the greyscale of the row
     """
-    return np.array([tuple([sum(x)//3]*3) for x in row])
+    return np.array([(sum(rgb) // 3,)*3 for rgb in row])
 
 def grey_scale(im):
     """
@@ -57,6 +57,15 @@ def grey_scale(im):
     with mp.Pool(PARALLEL) as p:
         return np.array(list(p.imap(grey_scale_row, im)))
 
+def black_white_row(row):
+    """
+    Arguments:
+        row: (numpy.ndarray): row of rgb values
+    Returns:
+        numpy.ndarray: the black and white of the row
+    """
+    return np.array([(sum(rgb) // 383 * 255,)*3 for rgb in row])
+
 def black_white(im):
     """
     Arguments:
@@ -64,11 +73,8 @@ def black_white(im):
     Returns:
         numpy.ndarray: black and white image
     """
-    im = im.copy()
-    for y, row in enumerate(im):
-        for x, rgb in enumerate(row):
-            im[y][x].fill(rgb.sum() // 383 * 255)
-    return im
+    with mp.Pool(PARALLEL) as p:
+        return np.array(list(p.imap(black_white_row, im)))
 
 if __name__ == '__main__':
     im = read('example.JPG')
