@@ -25,6 +25,7 @@ def show(im):
         im (numpy.ndarray): image array to display
     """
     plt.imshow(im)
+    plt.axis('off')
     plt.show()
 
 def invert(im):
@@ -96,8 +97,9 @@ def red_shift(im):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Convert image colors")
-    parser.add_argument('--conversion_type','-C', metavar = '-C', default = 'G',
-                        help = 'options are R for red_scale\n G for grayscale\n B for black and white \n and I for invet')
+    parser.add_argument('--conversion_type', '-C', metavar= '-C', default= 'G',
+                        help = ('options are R for red_scale\n G for grayscale'
+                                '\n B for black and white \n and I for invet'))
     parser.add_argument('--image_path','-I', metavar= 'I', required = True,
                         help = 'path to jpg image')
     parser.add_argument('--threads', '-T', default = 4, type=int,
