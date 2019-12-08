@@ -29,6 +29,14 @@ pip install matplotlib
 
 ## Usage
 
+### This converts example1.JPG to an inverted version. 
+```
+python convert.py example1.JPG -C I
+```
+
+![alt text](https://github.com/N8Brooks/image_conversion/blob/master/examples/invert.png)
+
+
 ### This converts example1.JPG to a black-and-white version. 
 ```
 python convert.py example1.JPG -C B
@@ -43,14 +51,6 @@ python convert.py example1.JPG -C G
 ```
 
 ![alt text](https://github.com/N8Brooks/image_conversion/blob/master/examples/greyscale.png)
-
-
-### This converts example1.JPG to an inverted version. 
-```
-python convert.py example1.JPG -C I
-```
-
-![alt text](examples/https://github.com/N8Brooks/image_conversion/blob/master/examples/invert.png)
 
 
 This converts example1.JPG to a redshift version. 
