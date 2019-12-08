@@ -2,7 +2,7 @@
 
 A script to augment images using python.
 
-### Prerequisites
+## Prerequisites
 
 * Python3
 * Python packages
@@ -15,7 +15,7 @@ pip install numpy
 pip install matplotlib
 ```
 
-### Arguments
+## Arguments
 
 * --conversion_type	(-C)
 	* B		Black-and-white
@@ -34,7 +34,7 @@ pip install matplotlib
 python convert.py example1.JPG -C B
 ```
 
-![alt text](examples/bw.JPG)
+![alt text](https://github.com/N8Brooks/image_conversion/blob/master/examples/bw.png)
 
 
 ### This converts example1.JPG to a greyscale version. 
@@ -42,7 +42,7 @@ python convert.py example1.JPG -C B
 python convert.py example1.JPG -C G
 ```
 
-![alt text](examples/greyscale.JPG)
+![alt text](https://github.com/N8Brooks/image_conversion/blob/master/examples/greyscale.png)
 
 
 ### This converts example1.JPG to an inverted version. 
@@ -50,7 +50,7 @@ python convert.py example1.JPG -C G
 python convert.py example1.JPG -C I
 ```
 
-![alt text](examples/invert.JPG)
+![alt text](examples/https://github.com/N8Brooks/image_conversion/blob/master/examples/invert.png)
 
 
 This converts example1.JPG to a redshift version. 
@@ -58,18 +58,19 @@ This converts example1.JPG to a redshift version.
 python convert.py example1.JPG -C R
 ```
 
-![alt text](examples/redshift.JPG)
+![alt text](https://github.com/N8Brooks/image_conversion/blob/master/examples/redshift.png)
 
 
-This displays the help menu
+### This displays the help menu
 ```
 python convert.py -h
+```
 
-### Authors
+## Authors
 
 * **Nathan Brooks** - *development* - [N8Brooks](https://github.com/N8Brooks)
 * **Curtis Bean** - *development* - [westlin3](https://github.com/westlin3)
 
-### License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
